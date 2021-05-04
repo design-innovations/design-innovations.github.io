@@ -1,0 +1,209 @@
+#directors-statement-inspiration {
+	#inspiration {
+		@include medium {
+			@include background-image-cover('inspiration-background.jpg');
+		}
+		h2 {
+			@extend %heading-content;
+			span.heading-opener {
+				@extend %heading-opener;
+				font-weight: map-get($sans-weight, "regular");
+			}
+			span.heading-content {
+				font-family: $font-family-heading;
+				display: block;
+				text-transform: uppercase;
+				$map: (576px: 40px, 1200px: 121px);
+			    @include poly-fluid-sizing('padding-bottom', $map);
+				strong {
+					font-size: 1.2em;
+					font-weight: 300;
+				}
+			}
+			@extend .h2-alt;
+		}
+		#posters {
+			padding: 0;
+			@include xlarge {
+				width: 92%;
+			}
+			margin: 0 auto;
+			position: relative;
+			z-index: 10;
+			p {
+				position: relative;
+			}
+			img {
+				transition: 0.3s;
+				&:hover {
+					transform: scale(1.25);
+				    box-shadow: 5px 5px 10px black;
+				    position: relative;
+				    z-index: 1;
+				}
+			}
+		}
+	}
+
+	#wrap-directors-statement {
+		background: $black;
+		color: $white;
+		padding-bottom: ($default_spacing * 3);
+		@include medium-max {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@include large {
+			padding-bottom: ($default_spacing * 7);
+		}
+		$map: (576px: -220px, 768px: -268px, 990px: -298px, 992px: -198px, 1200px: -318px, 1440px: -368px);
+	    @include poly-fluid-sizing('margin-top', $map);
+		$map: (576px: 220px, 768px: 268px, 990px: 298px, 992px: 158px, 1200px: 225px, 1440px: 225px);
+	    @include poly-fluid-sizing('padding-top', $map);
+		img {
+			$map: (576px: -220px, 768px: -268px, 990px: -298px, 992px: -158px, 1200px: -225px, 1440px: -225px);
+		    @include poly-fluid-sizing('margin-top', $map);
+			@include medium-max {
+				margin-left: 0px;
+				margin-right: 0px;
+				padding: 0;
+			}
+			@include large {
+				float: left;
+				margin-left: calc(-2em + -15px);
+			}
+		}
+		#directors-statement {
+			text-align: left;
+			@include medium-max {
+				padding: 2em 2.8em;
+			}
+			@include only-large {
+				h2 {
+					//font-size: .85em;
+				}
+			}
+		}
+		h2 {
+			$map: (576px: 52px, 1200px: 64px);
+		    @include poly-fluid-sizing('font-size', $map);
+			font-weight: map-get($sans-weight, "regular");
+		}
+		h3 {
+			text-transform: uppercase;
+			font-size: 1.7em;
+			font-family: $font-family-display-bold;
+			font-weight: map-get($sans-weight, "regular");
+			letter-spacing: 2px;
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+		.season-one {
+			object-fit: cover;
+			object-position: center top;
+		}
+		ul {
+			@extend %inline-list;
+			line-height: 3.1;
+			@include large {
+				margin-left: -1.1em;
+			}
+			li {
+				@include custom-max-width(1385) {
+					width: 47.7%;
+					&:nth-of-type(even) {
+						margin-right: 0;
+					}
+				}
+				@include xxsmall-max {
+					width: 100%;
+				}
+				a {
+					background: $dark-blue;
+					color: $white;
+					font-size: .8em;
+					font-weight: bold;
+					padding: 0em 1.5em;
+					text-transform: uppercase;
+					display: block;
+					text-align: center;
+					@include border-radius(20px);
+					@include small-max {
+						width: 100%;
+						display: block;
+						text-align: center;
+						padding: .05em 1em;
+						margin-bottom: 1em;
+					}
+					&:hover, &:focus {
+						background-color: $light-blue;
+					}
+				}
+			}
+		}
+	}
+
+	#why-were-making-it {
+		background-color: $absolute-black;
+		@extend %push-to-edge;
+		#why-were-making-it-inner {
+			width: 100%;
+			@include background-image-cover('why-video-background.jpg');
+			@extend %default-bottom-padding;
+			@extend %default-bottom-margin;
+		}
+		.wrap-quote {
+			@include xsmall-max {
+
+			}
+			@include small-and-medium {
+				margin: 0 ($default-spacing * 2);
+				padding-left: 0;
+			}
+			@include medium {
+				margin-left: -15px;
+			}
+		}
+		blockquote {
+			background-color: rgba($red, 0.9);
+			color: $white;
+			$map: (576px: 20px, 1200px: 26px);
+			@include poly-fluid-sizing('font-size', $map);
+			text-align: left;
+			padding: 1.7em 2em 2em;
+			margin: -2em 0 7em;
+			@include medium {
+				width: calc(100% + 20px);
+				padding: 2.7em 3em 3em;
+			}
+			p {
+				margin-top: 0;
+				line-height: 1.2;
+				font-size: inherit;
+				&:first-child {
+					&:before {
+						content: "“";
+						display: block;
+						font-size: 4em;
+						line-height: .7;
+					}
+				}
+			}
+			footer {
+				font-family: $font-family-display-bold;
+				text-transform: uppercase;
+				font-size: 1.15em;
+			}
+		}
+		.wrap-btn {
+			text-align: right;
+			padding-right: 0;
+		}
+	}
+
+	#distressed-still-2 {
+		&.is-visible {
+			background-image: url('assets/img/where-divider-photo-after.jpg');
+		}
+	}
+}

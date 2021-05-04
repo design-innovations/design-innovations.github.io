@@ -1,0 +1,86 @@
+#introduction {
+	position: relative;
+	z-index: 2;
+	#synopsis {
+		@include medium {
+			@include background-image-cover('synopsis-background.jpg');
+		}
+		$map: (576px: 22px, 768px: 24px, 992px: 34px, 1200px: 175px);
+	    @include poly-fluid-sizing('padding-top', $map);
+	    //@include poly-fluid-sizing('padding-bottom', $map);
+		background-color: #141410;
+		color: $white;
+		img {
+			margin-bottom: ($default-spacing * 2);
+			object-fit: cover;
+			object-position: center top;
+			font-family: 'object-fit: cover; object-position: right;'; // IE Polyfill
+			&:nth-of-type(1) {
+				object-position: right top;
+			}
+		}
+		h2 {
+			text-align: left;
+			margin-bottom: .48em;
+			@include desktop-and-larger {
+				margin-top: 1em;
+			}
+		}
+		p {
+			text-align: left;
+			line-height: 1.67;
+			margin-top: 0;
+			$map: (576px: 18px, 768px: 20px, 992px: 24px, 1200px: 32px);
+		    @include poly-fluid-sizing('font-size', $map);
+		}
+		.wrap-content-1, .img-3, .img-4 {
+			@extend %center-space-left;
+		}
+		.wrap-content-2, .img-1, .img-2 {
+			@extend %center-space-right;
+		}
+		.wrap-content-2 {
+			text-align: right;
+			@include small {
+				margin-top: -3em;
+			}
+			@include large {
+				padding-top: 1.5em;
+			}
+			p {
+				text-align: right;
+				padding-bottom: .9em;
+			}
+			.click-here {
+				padding: 1.14em 3.5em 1.14em 1.1em;
+				margin-bottom: ($default-spacing * 2);
+			}
+		}
+
+		@include small {
+			.wrap-content-2 {
+				position: relative;
+				top: ($default-spacing * 6);
+			}
+			.img-3 {
+				position: relative;
+				top: ($default-spacing * 4);
+			}
+			.img-4 {
+				margin-top: ($default-spacing * 4);
+			}
+		}
+	}
+	#distressed-still-1 {
+		margin-top: -1px;
+		width: 100%;
+		max-width: none;
+		height: 400px;
+		&.is-visible {
+			background-image: url('assets/img/synopsis-divider-photo-after.jpg');
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+}

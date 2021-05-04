@@ -1,0 +1,39 @@
+$theme: default;
+
+// --------------------------------------------------
+// Base
+// --------------------------------------------------
+
+h2, .h2 {
+	@extend %main-title;
+}
+a {
+	color: $red;
+}
+.distressed-still {
+	background-color: $slate;
+	img {
+		height: 100%;
+		object-fit: contain;
+		object-position: center top;
+		opacity: 1;
+	}
+	&.is-visible {
+		background-size: cover;
+		img {
+			opacity: 0;
+			animation: distressed-1 2.5s 1 ease-in;
+		}
+		@keyframes distressed-1 {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: .7;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+	}
+}

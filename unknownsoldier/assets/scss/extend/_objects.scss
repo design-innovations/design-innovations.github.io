@@ -1,0 +1,119 @@
+%button {
+	display:inline-block;
+	position: relative;
+	padding: 1em 3.5em 1em 1.1em;
+	margin:0.1em;
+	border:0.1em solid $red;
+	box-sizing: border-box;
+	text-decoration:none;
+	text-transform: uppercase;
+	font-family: $font-family-sans;
+	/*font-size: 1.25em;
+	font-size: 1.25rem;
+	@include large {
+		font-size: 1.75em;
+		font-size: 1.75rem;
+	}*/
+	$map: (576px: 20px, 768px: 22px, 992px: 24px, 1200px: 28px);
+    @include poly-fluid-sizing('font-size', $map);
+	font-weight:400;
+	letter-spacing: 2px;
+	color: $white;
+	background-color: $red;
+	text-align:center;
+	transition: 0.3s;
+	line-height: 1.1;
+	@media all and (max-width:30em) {
+		display:block;
+		margin:0.2em auto;
+	}
+	&:hover, &:focus {
+		background-color: $light-blue;
+		border-color: $light-blue;
+	}
+	&:active{
+		background-color: $light-blue;
+	}
+	&:after {
+		content: "·";
+		color: transparent;
+		background: url(assets/img/button-play.svg) no-repeat top right;
+		background-size: contain;
+		cursor: pointer;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+%alt-button {
+	display:inline-block;
+	position: relative;
+	padding:1.1em 1.1em 1.1em 4.8em;
+	margin:0.1em;
+	border: none;
+	box-sizing: border-box;
+	text-decoration:none;
+	text-transform: uppercase;
+	font-family: $font-family-sans;
+	font-size: 1.75em;
+	font-size: 1.75rem;
+	font-weight:400;
+	letter-spacing: 2px;
+	color: $white;
+	background-color: $red;
+	text-align:center;
+	transition: 0.3s;
+	@media all and (max-width:30em) {
+		display:block;
+		margin:0.2em auto;
+	}
+	&:hover, &:focus {
+		background-color: $light-blue;
+		border-color: $light-blue;
+	}
+	&:active{
+		background-color: $light-blue;
+	}
+	&:before {
+		content: "·";
+		color: transparent;
+		background: $white url(assets/img/button-play.svg) no-repeat top left;
+		background-size: contain;
+		cursor: pointer;
+		height: 100%;
+		width: 30%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+%flex-hv-center {
+	align-items: center;
+	justify-content: center;
+}
+%flex-h-center {
+	display: flex;
+	justify-content: center;
+}
+%flex-v-center {
+	display: flex;
+	align-items: center;
+}
+%inset-box {
+	display: flex;
+	margin-left: $default-spacing;
+	margin-right: $default-spacing;
+}
+%inline-list {
+	padding-left: 0px;
+	li {
+		display: inline-block;
+		margin-right: 10px;
+		&:last-child {
+			margin-left: 0;
+		}
+	}
+}

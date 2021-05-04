@@ -1,0 +1,551 @@
+#target-audience {
+	background-color: $slate;
+	color: $white;
+	@extend %full-width-background;
+	h2 {
+		margin-top: 0;
+		@include small {
+			margin-bottom: 0.64em;
+		}
+		@include small-max {
+			font-size: 62px;
+    		font-size: calc(1.04167vw + 52px);
+			margin-bottom: 0.25em;
+		}
+	}
+	h3, h4 {
+		font-family: $font-family-display;
+		text-transform: uppercase;
+		font-size: 1.6em;
+		margin: .75em 0;
+	}
+	.description {
+		text-align: left;
+		margin-top: 0;
+		line-height: 1.3;
+		text-transform: uppercase;
+		@include small-max {
+			margin-bottom: 3.25em;
+		}
+	}
+	& > .row:first-of-type {
+		padding-bottom: 0;
+	}
+	#time-gender-stats-1 {
+		figure {
+			display: block;
+			height: 0;
+			margin: 0 auto 3.5em;
+			position: relative;
+			font-size:16px;
+			font-size:1vw;
+			width: 55em;
+			max-width: 100%;
+			padding-bottom: 55em;
+			@include large {
+				max-width: 600px;
+				width: 40em;
+				padding-bottom: 40em;
+			}
+			@include custom-min-width(1440) {
+				padding-bottom: 676.4px;
+				margin-bottom: 0;
+			}
+			overflow: hidden;
+		}
+		svg {
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: visible;
+			transform: rotate(-20deg);
+		}
+		&.is-visible {
+			circle {
+				fill:rgba(0,0,0,0);
+				stroke-width:31.8309886184;
+				stroke-dasharray: 0,0,0,100;
+				stroke-dashoffset: 25;
+				-webkit-animation: pie1 3s 1 ease both;
+				animation: pie1 6s 1 ease both;
+			}
+		}
+		&.is-visible {
+			.pie1 {
+				stroke: $chart-green;
+			}
+			.pie2 {
+				stroke: $chart-yellow;
+				-webkit-animation-name: pie2;
+				animation-name: pie2;
+			}
+			.pie3 {
+				stroke: $chart-light-brown;
+				-webkit-animation-name: pie3;
+				animation-name: pie3;
+			}
+			.pie4 {
+				stroke: $chart-dark-brown;
+				-webkit-animation-name: pie4;
+				animation-name: pie4;
+			}
+			.pie5 {
+				stroke: $chart-orange;
+				-webkit-animation-name: pie5;
+				animation-name: pie5;
+			}
+		}
+		.pie-divider {
+			width: 8px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: calc(50% - 4px);
+			margin: 0 auto;
+			&:before {
+				position: absolute;
+				content: "";
+				background: $slate;
+				height: 50%;
+				width: 8px;
+				top: 0;
+				margin-left: -4px;
+				//animation-direction: reverse;
+			}
+			&:after {
+				content: "";
+				font-family: $font-family-heading;
+				display: block;
+				font-size: 3.1em;
+				transform: rotate(-70deg);
+				position: absolute;
+			}
+		}
+		&.is-visible {
+			.pie-divider {
+				&:before {
+					animation: pie-divider 2.7s 1 ease-in;
+				}
+				&:after {
+					animation: pie-numbers 3s 1 ease-in;
+				}
+			}
+		}
+		.pie-text {
+			position: absolute;
+			left: calc(50% - 1em);
+			top: calc(50% - 1.5em);
+			width: 100%;
+			&:after {
+				content: "";
+				font-family: $font-family-heading;
+				display: block;
+				$map: (576px: 30px, 1200px: 50px);
+				@include poly-fluid-sizing('font-size', $map);
+				position: absolute;
+			}
+		}
+		&.is-visible {
+			.pie-text {
+				&:after {
+					animation: pie-numbers 3s 1 ease-in;
+				}
+			}
+		}
+		.pie1-text {
+			&:after {
+				content: "5%";
+				margin-left: 37%;
+				margin-top: -8.8%;
+				@include medium {
+    				margin-top: -8.7%;
+				}
+				@include xlarge {
+    				margin-top: -7.9%;
+				}
+			}
+		}
+		.pie2-text {
+			&:after {
+				content: "15%";
+				margin-left: 32%;
+    			margin-top: 14%;
+			}
+		}
+		.pie3-text {
+			&:after {
+				content: "20%";
+				margin-left: -1%;
+				margin-top: 37%;
+			}
+		}
+		.pie4-text {
+			&:after {
+				content: "35%";
+				margin-left: -37%;
+    			margin-top: -4%;
+			}
+		}
+		.pie5-text {
+			&:after {
+				content: "25%";
+				margin-left: 13%;
+				margin-top: -34%;
+			}
+		}
+		.pie1-divider {
+			transform: rotate(70deg);
+		}
+		.pie2-divider {
+			transform: rotate(88deg);
+		}
+		.pie3-divider {
+			transform: rotate(142deg);
+		}
+		.pie4-divider {
+			transform: rotate(214deg);
+		}
+		.pie5-divider {
+			transform: rotate(-20deg);
+		}
+		@keyframes pie-divider {
+			0% {
+				transform: scaleX(0);
+				transform-origin: bottom left;
+				opacity: 0;
+			}
+			85% {
+				transform: scaleX(0);
+				transform-origin: bottom left;
+				opacity: 0;
+			}
+			100% {
+				transform: scaleX(1);
+				transform-origin: bottom left;
+				opacity: 1;
+			}
+		}
+		@keyframes pie-numbers {
+			0% {
+				opacity: 0;
+			}
+			85% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		/*
+		pie percentage made by stroke-dasharray.
+		stroke-dasharray format is...
+
+		keyframe 100% : 0 offset this-percentage rest
+
+		I added keyframe 50% for infinite presentation.
+		*/
+
+		/* 1st pie is 40% */
+		@-webkit-keyframes pie1 {
+			50%,100% {stroke-dasharray: 40,60,0,0;}
+		}
+		@keyframes pie1 {
+			50%,100% {stroke-dasharray: 25,75,0,0;}
+		}
+		/* 2nd pie is 30% */
+		@-webkit-keyframes pie2 {
+			50%,100% {stroke-dasharray: 0,40,30,30;}
+		}
+		@keyframes pie2 {
+			50%,100% {stroke-dasharray: 0,25,5,70;}
+		}
+		/* 3rd pie is 30% */
+		@-webkit-keyframes pie3 {
+			50%,100% {stroke-dasharray: 0,70,20,10;}
+		}
+		@keyframes pie3 {
+			50%,100% {stroke-dasharray: 0,30,15,55;}
+		}
+		/* 4th pie is 10% */
+		@-webkit-keyframes pie4 {
+			50%,100% {stroke-dasharray: 0,90,10,0;}
+		}
+		@keyframes pie4 {
+			50%,100% {stroke-dasharray: 0,45,20,35;}
+		}
+		/* 5th pie is 10% */
+		@-webkit-keyframes pie5 {
+			50%,100% {stroke-dasharray: 0,90,10,0;}
+		}
+		@keyframes pie5 {
+			50%,100% {stroke-dasharray: 0,65,35,0;}
+		}
+	}
+	#pie-stat-percentages, #gender-graphic ul {
+		@extend %inline-list;
+		text-align: center;
+		font-size: 1.1em;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		li {
+			margin-right: 1.5em;
+			$map: (576px: 20px, 992px: 12px, 1140px: 22px, 1200px: 26px);
+			@include poly-fluid-sizing('margin-right', $map);
+			font-family: $font-family-display-bold
+		}
+		span {
+			font-family: $font-family-heading;
+			display: block;
+			$map: (576px: 46px, 1200px: 56px);
+			@include poly-fluid-sizing('font-size', $map);
+			margin-bottom: -7px;
+		}
+	}
+	#pie-stat-percentages {
+		margin: 0em 0 2em;
+		li {
+			&:nth-of-type(1) {
+				span {
+					color: $chart-orange;
+				}
+			}
+			&:nth-of-type(2) {
+				span {
+					color: $chart-green;
+				}
+			}
+			&:nth-of-type(3) {
+				span {
+					color: $chart-dark-brown;
+				}
+			}
+			&:nth-of-type(4) {
+				span {
+					color: $chart-light-brown;
+				}
+			}
+			&:nth-of-type(5) {
+				span {
+					color: $chart-yellow;
+				}
+			}
+		}
+	}
+	#time-gender-stats-2 {
+		.row {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	#avg-watch-time {
+		h3 {
+			margin-top: 0;
+		}
+		p {
+			padding: 0;
+			line-height: 0;
+			margin-bottom: ($default-spacing * 2);
+			position: relative;
+			overflow: hidden;
+			&:before {
+				content: "";
+				width: 100%;
+				height: 90%;
+				background-color: #a7a5a6;;
+				position: absolute;
+				top: 4px;
+				bottom: 6px;
+				left: -2px;
+				right: 4px;
+			}
+			&:after {
+				content: "";
+				width: 90%;
+				height: 90%;
+				background-color: $meter-orange;
+				position: absolute;
+				top: 4px;
+				bottom: 6px;
+				left: -2px;
+				right: 4px;
+				transform: skew(-45deg);
+			}
+			span { // Fix for strange edge popping out from sides of svg on some resizing
+				overflow: hidden;
+				height: 98%;
+				width: 98%;
+				position: relative;
+				top: 2px;
+				&:before {
+					content: "";
+					width: 6px;
+					height: 20em;
+					display: inline-block;
+					background-color: $slate;
+					position: absolute;
+					top: -10em;
+					left: 0px;
+					right: 0;
+					z-index: 20;
+				}
+				&:after {
+					content: "";
+					width: 6px;
+					height: 20em;
+					display: inline-block;
+					background-color: $slate;
+					position: absolute;
+					top: -10em;
+					right: 0px;
+					z-index: 18;
+				}
+			}
+			img {
+				position: relative;
+				z-index: 30;
+				width: 100%;
+				height: 100%;
+				max-width: none;
+				border-bottom: solid 1px $slate;
+			}
+		}
+		&.is-visible {
+			p {
+				&:after {
+					animation: avg-time-meter 2.7s 1 ease-in;
+				}
+			}
+			@keyframes avg-time-meter {
+				0% {
+					width: 0;
+				}
+				100% {
+					width: 90%;
+				}
+			}
+		}
+	}
+
+	#gender-graphic {
+		font-size: 1.2em;
+		p {
+			position: relative;
+			line-height: 0;
+			margin: 0 1px;
+			&:before {
+				content: "";
+				width: 54%;
+				height: 60%;
+				background-color: $chart-dark-brown;
+				position: absolute;
+				bottom: 1px;
+				left: 1px;
+			}
+			&:after {
+				content: "";
+				width: 50%;
+				height: 35%;
+				background-color: $chart-dark-blue;
+				position: absolute;
+				bottom: 1px;
+				right: 0;
+			}
+
+		}
+		&.is-visible {
+			p {
+				&:before {
+					animation: gender-graphic 2.7s 1 ease-in;
+				}
+				&:after {
+					animation: gender-graphic 2.7s 1 ease-in;
+				}
+			}
+		}
+		@keyframes gender-graphic {
+			0% {
+				transform: scaleY(0);
+				transform-origin: bottom left;
+				opacity: 1;
+			}
+			100% {
+				transform: scaleY(1);
+				transform-origin: bottom left;
+				opacity: 1;
+			}
+		}
+		img {
+			position: relative;
+			z-index: 10;
+			width: 102%;
+			height: 100%;
+			max-width: none;
+		}
+		ul {
+			li {
+				$map: (500px: 140px, 575px: 170px, 576px: 30px, 991px: 130px, 992px: 18px, 1200px: 38px, 1440px: 68px);
+				@include poly-fluid-sizing('margin-right', $map);
+				position: relative;
+				$map: (500px: 30px, 575px: 28px, 576px: 12px, 991px: 22px, 992px: 10px, 993px: 10px, 1200px: 18px, 1440px: 18px);
+				@include poly-fluid-sizing('left', $map);
+				&:nth-of-type(2) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	#gender-text {
+		text-align: left;
+		h3 {
+			margin-top: 0;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+
+	#target-statistics {
+		#time-gender-stats-2 {
+			li {
+				&:nth-of-type(1) {
+					span {
+						color: $chart-light-brown;
+					}
+				}
+				&:nth-of-type(2) {
+					span {
+						color: $chart-blue;
+					}
+				}
+			}
+		}
+	}
+
+	#additional-target-info {
+		padding-bottom: ($default-spacing * 3);
+		@include small-max {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		h3 {
+			font-family: $font-family-heading;
+			font-size: 2em;
+			font-weight: 300;
+		}
+		p {
+			margin-top: 0;
+			font-size: 1em;
+			line-height: 1.65;
+		}
+	}
+
+	#distressed-still-4 {
+		&.is-visible {
+			background-image: url('assets/img/target-divider-photo-after.jpg');
+		}
+	}
+}

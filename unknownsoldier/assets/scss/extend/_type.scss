@@ -1,0 +1,36 @@
+%heading-opener {
+	display: inline-block;
+	text-transform: uppercase;
+	@extend %bold-typewriter;
+	letter-spacing: 3px;
+	$map: (576px: 22px, 1200px: 37px);
+    @include poly-fluid-sizing('padding-bottom', $map);
+	&:after {
+		content: "";
+		background: url('assets/img/underline.png') no-repeat center top;
+		background-size: contain;
+		display: block;
+		height: 15px;
+		width: 110%;
+		margin-top: 9px;
+	}
+}
+
+%heading-content {
+	@extend %bold-typewriter;
+	text-transform: none;
+	margin: 0 auto;
+	letter-spacing: -1px;
+	line-height: .92;
+}
+
+%bold-typewriter {
+	font-family: $font-family-monospace-alt-bold;
+}
+%main-title {
+	line-height: .9;
+	margin-top: .5em;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-weight: 300;
+}

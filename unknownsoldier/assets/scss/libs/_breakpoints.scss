@@ -1,0 +1,324 @@
+// Breakpoints
+// Original Basic Source: http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+// Expanded by Jonathan Shroyer of DesignInnovations.net
+
+// Phone
+@mixin phone {
+	@media only screen and (max-width: 480px) {
+		@content;
+	}
+}
+@mixin super-small-phone {
+	@media only screen and (max-width: 240px) {
+		@content;
+	}
+}
+@mixin small-phone {
+	@media only screen and (max-width: 359px) {
+		@content;
+	}
+}
+@mixin phone-only {
+	@media only screen and (min-width: 360px) and (max-width: 480px) {
+		@content;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@mixin tablet-portrait {
+	@media only screen and (min-width: 481px) and (max-width: 767px) {
+		@content;
+	}
+}
+@mixin tablet-portrait-and-smaller {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+@mixin tablet-portrait-and-larger {
+	@media only screen and (min-width: 481px) {
+		@content;
+	}
+}
+
+/* Small tablet - includes media query for tablet-portrait, but cuts out larger sizes */
+@mixin small-tablet-portrait {
+	@media only screen and (min-width: 481px) and (max-width: 599px) {
+		@content;
+	}
+}
+@mixin small-tablet-portrait-and-smaller {
+	@media only screen and (max-width: 599px) {
+		@content;
+	}
+}
+@mixin small-tablet-portrait-and-larger {
+	@media only screen and (min-width: 481px) {
+		@content;
+	}
+}
+
+/* Large tablet  - includes media query for tablet-portrait, but cuts out smaller sizes */
+@mixin large-tablet-portrait {
+	@media only screen and (min-width: 600px) and (max-width: 770px) {
+		@content;
+	}
+}
+@mixin large-tablet-portrait-and-smaller {
+	@media only screen and (max-width: 770px) {
+		@content;
+	}
+}
+@mixin large-tablet-portrait-and-larger {
+	@media only screen and (min-width: 600px) {
+		@content;
+	}
+}
+
+/* Tablet landscape */
+@mixin tablet-landscape {
+	@media only screen and (min-width: 771px) and (max-width: 991px) {
+		@content;
+	}
+}
+@mixin tablet-landscape-and-smaller {
+	@media only screen and (max-width: 991px) {
+		@content;
+	}
+}
+@mixin tablet-landscape-and-larger {
+	@media only screen and (min-width: 770px) {
+		@content;
+	}
+}
+
+// Desktop
+@mixin desktop {
+	@media only screen and (min-width: 992px) and (max-width: 1199px) {
+		@content;
+	}
+}
+@mixin desktop-and-smaller {
+	@media only screen and (max-width: 1199px) {
+		@content;
+	}
+}
+@mixin desktop-and-larger {
+	@media only screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+/* Large desktop */
+@mixin large-desktop {
+	@media only screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+/* Non-retina */
+@mixin non-retina {
+	@media only screen and (-webkit-max-device-pixel-ratio: 1) {
+		@content;
+	}
+}
+
+/* Retina Only */
+@mixin retina {
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+		@content;
+	}
+}
+
+/* All high density media */
+@mixin highdensity {
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+	only screen and (   min--moz-device-pixel-ratio: 1.25),
+	only screen and (     -o-min-device-pixel-ratio: 1.25/1),
+	only screen and (        min-device-pixel-ratio: 1.25),
+	only screen and (                min-resolution: 200dpi),
+	only screen and (                min-resolution: 1.25dppx) {
+		@content;
+	}
+}
+
+// Bootstrap 4 sizes
+// Including Bootstrap sizes to prevent errors when compiling without Bootstrap
+// ----------------------------------------------------------------------------
+
+$grid-breakpoints: (
+		xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+);
+
+// Extra small screen / small phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  map-get($grid-breakpoints, xs);
+$screen-xs-min:              $screen-xs;
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+$screen-sm:                  map-get($grid-breakpoints, sm);
+$screen-sm-min:              $screen-sm;
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+$screen-md:                  map-get($grid-breakpoints, md);
+$screen-md-min:              $screen-md;
+$screen-desktop:             $screen-md-min;
+
+// Large screen / large desktop
+$screen-lg:                  map-get($grid-breakpoints, lg);
+$screen-lg-min:              $screen-lg;
+$screen-lg-desktop:          $screen-lg-min;
+
+// Extra large screen / extra large desktop
+$screen-xl:                  map-get($grid-breakpoints, xl);
+$screen-xl-min:              $screen-xl;
+$screen-xl-desktop:          $screen-xl-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxs-max:             ($screen-xs-min - 1);
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+$screen-lg-max:              ($screen-xl-min - 1);
+
+/* Custom devices
+@mixin rwd($screen) {
+   @media (min-width: $screen+'px') {
+       @content;
+   }
+}*/
+
+// Mixin
+@mixin xlarge {
+	@media only screen and (min-width: #{$screen-xl}) {
+		@content;
+	}
+}
+@mixin large {
+	@media only screen and (min-width: #{$screen-lg}) {
+		@content;
+	}
+}
+@mixin medium {
+	@media only screen and (min-width: #{$screen-md}) {
+		@content;
+	}
+}
+@mixin small {
+	@media only screen and (min-width: #{$screen-sm}) {
+		@content;
+	}
+}
+@mixin xsmall {
+	@media only screen and (min-width: #{$screen-xs}) {
+		@content;
+	}
+}
+@mixin large-max {
+	@media only screen and (max-width: #{$screen-lg-max}) {
+		@content;
+	}
+}
+@mixin medium-max {
+	@media only screen and (max-width: #{$screen-md-max}) {
+		@content;
+	}
+}
+@mixin small-max {
+	@media only screen and (max-width: #{$screen-sm-max}) {
+		@content;
+	}
+}
+@mixin xsmall-max {
+	@media only screen and (max-width: #{$screen-xs-max}) {
+		@content;
+	}
+}
+@mixin xxsmall-max {
+	@media only screen and (max-width: #{$screen-xs-max}) {
+		@content;
+	}
+}
+@mixin less-than-xsmall {
+	@media only screen and (max-width: #{$screen-xs - 1}) {
+		@content;
+	}
+}
+
+@mixin only-xsmall {
+	@media only screen and (min-width: #{$screen-xs}) and (max-width: #{$screen-xs-max}) {
+		@content;
+	}
+}
+@mixin only-small {
+	@media only screen and (min-width: #{$screen-sm}) and (max-width: #{$screen-sm-max}) {
+		@content;
+	}
+}
+@mixin only-medium {
+	@media only screen and (min-width: #{$screen-md}) and (max-width: #{$screen-md-max}) {
+		@content;
+	}
+}
+@mixin only-large {
+	@media only screen and (min-width: #{$screen-lg}) and (max-width: #{$screen-lg-max}) {
+		@content;
+	}
+}
+@mixin only-xlarge {
+	@media only screen and (min-width: #{$screen-xl}) {
+		@content;
+	}
+}
+@mixin small-and-medium {
+	@media only screen and (min-width: #{$screen-sm}) and (max-width: #{$screen-md-max}) {
+		@content;
+	}
+}
+@mixin xsmall-through-medium {
+	@media only screen and (min-width: #{$screen-xs}) and (max-width: #{$screen-md-max}) {
+		@content;
+	}
+}
+@mixin xsmall-through-large {
+	@media only screen and (min-width: #{$screen-xs}) and (max-width: #{$screen-lg-max}) {
+		@content;
+	}
+}
+@mixin small-through-large {
+	@media only screen and (min-width: #{$screen-sm}) and (max-width: #{$screen-lg-max}) {
+		@content;
+	}
+}
+@mixin medium-through-large {
+	@media only screen and (min-width: #{$screen-md}) and (max-width: #{$screen-lg-max}) {
+		@content;
+	}
+}
+// Custom devices
+@mixin custom-min-width($screen) {
+   @media only screen and (min-width: $screen+'px') {
+       @content;
+   }
+}
+@mixin custom-max-width($screen) {
+   @media only screen and (max-width: $screen+'px') {
+       @content;
+   }
+}
+@mixin custom-min-max-width($screen1, $screen2) {
+   @media only screen and (min-width: $screen1+'px') and (max-width: $screen2+'px') {
+       @content;
+   }
+}

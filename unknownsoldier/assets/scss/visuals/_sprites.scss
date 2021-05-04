@@ -1,0 +1,48 @@
+@mixin cssSprite( $spriteVals ) {
+	width: nth( $spriteVals, 1 );
+	height: nth( $spriteVals, 2 );
+	background-repeat: no-repeat;
+	background-image: url( #{ nth( $spriteVals, 3 ) } );
+	background-position: nth( $spriteVals, 4 ) nth( $spriteVals, 5 );
+	@media only screen and ( -webkit-min-device-pixel-ratio: 2 ), only screen and ( min-device-pixel-ratio: 2 ) {
+		background-image: url( #{ nth( $spriteVals, 6 ) } );
+		background-size: $bgiSizeW $bgiSizeH;
+	}
+}
+$spritesPath: 'assets/img/sprites/sprites';
+$spritesURL: $spritesPath + '.png';
+$spritesx2URL: $spritesPath + '@2.png';
+$bgiSizeW: 534px;
+$bgiSizeH: 109px;
+$future-number-5-active: 51px 47.5px $spritesURL -285px -55px $spritesx2URL;
+$future-number-4-active: 42.5px 49px $spritesURL -237.5px -55px $spritesx2URL;
+$future-number-3-active: 32px 49px $spritesURL -200.5px -55px $spritesx2URL;
+$future-number-2-active: 23.5px 49px $spritesURL -177px -55px $spritesx2URL;
+$future-number-1-active: 4.5px 47.5px $spritesURL -170.5px -56px $spritesx2URL;
+$future-number-5-inactive: 51px 47.5px $spritesURL -114.5px -55px $spritesx2URL;
+$future-number-4-inactive: 42.5px 49px $spritesURL -67px -55px $spritesx2URL;
+$future-number-3-inactive: 32px 49px $spritesURL -30px -55px $spritesx2URL;
+$future-number-2-inactive: 23.5px 49px $spritesURL -6.5px -55px $spritesx2URL;
+$future-number-1-inactive: 4.5px 47.5px $spritesURL 0px -56px $spritesx2URL;
+$icon-join-drop-menu: 12px 14px $spritesURL -508px -56px $spritesx2URL;
+$icon-back-to-top: 25px 25px $spritesURL -503.5px 0px $spritesx2URL;
+$mediaura-logo: 162px 37.5px $spritesURL -341px -56px $spritesx2URL;
+$icon-airing: 34.5px 42px $spritesURL -464px 0px $spritesx2URL;
+$icon-promotion: 42px 42px $spritesURL -417px 0px $spritesx2URL;
+$icon-editing: 54.5px 42px $spritesURL -357.5px 0px $spritesx2URL;
+$icon-production: 41px 42px $spritesURL -311.5px 0px $spritesx2URL;
+$icon-equipment: 33px 42px $spritesURL -273.5px 0px $spritesx2URL;
+$icon-talent: 53px 42px $spritesURL -215.5px 0px $spritesx2URL;
+$icon-avg-cost: 42px 42px $spritesURL -168.5px 0px $spritesx2URL;
+$icon-budget-2: 39.5px 42px $spritesURL -124px 0px $spritesx2URL;
+$icon-budget-1: 42px 42px $spritesURL -77px 0px $spritesx2URL;
+$icon-open-menu: 50px 50px $spritesURL 0px 0px $spritesx2URL;
+$icon-star: 17px 17px $spritesURL -55px 0px $spritesx2URL;
+$spritesList: $future-number-5-active future-number-5-active, $future-number-4-active future-number-4-active, $future-number-3-active future-number-3-active, $future-number-2-active future-number-2-active, $future-number-1-active future-number-1-active, $future-number-5-inactive future-number-5-inactive, $future-number-4-inactive future-number-4-inactive, $future-number-3-inactive future-number-3-inactive, $future-number-2-inactive future-number-2-inactive, $future-number-1-inactive future-number-1-inactive, $icon-join-drop-menu icon-join-drop-menu, $icon-back-to-top icon-back-to-top, $mediaura-logo mediaura-logo, $icon-airing icon-airing, $icon-promotion icon-promotion, $icon-editing icon-editing, $icon-production icon-production, $icon-equipment icon-equipment, $icon-talent icon-talent, $icon-avg-cost icon-avg-cost, $icon-budget-2 icon-budget-2, $icon-budget-1 icon-budget-1, $icon-open-menu icon-open-menu, $icon-star icon-star;
+@each $icon in $spritesList {
+	$spritesName: nth( $icon, 2 );
+	$spritesClass: nth( $icon, 1 );
+	.sprite-#{$spritesName} {
+		@include cssSprite( $spritesClass );
+	}
+}

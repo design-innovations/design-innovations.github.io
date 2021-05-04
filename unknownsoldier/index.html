@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en" class="no-js animation-not-ready">
+
+<head>
+    <meta charset="utf-8">
+    <title>Unknown Soldier</title>
+    <meta name="description" content="Unknown Soldier">
+    <meta name="author" content="Jonathan Shroyer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- //github.com/scottjehl/picturefill -->
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js"></script>-->
+    <script src="assets/js/dist/head_js/headjs.mins.js"></script>
+</head>
+
+<body>
+    <a id="top"></a>
+    <div id="debug-box"></div>
+    <div id="page-wrap" class="container-fluid">
+        <header id="header" class="row" role="banner">
+            <div class="vimeo-wrapper">
+                <iframe src="https://player.vimeo.com/video/230607208?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <div id="darken-video"></div>
+            </div>
+            <div id="banner" class="block">
+                <div id="header-stick" class="container-fluid headroom">
+                    <div id="header-stick-inner" class="row">
+                        <h1 class="logo col-xs-12 col-sm-4 col-md-6"><span id="header-logo-wrap" class="logo-wrap"><span class="logo-unknown">Unknown</span> <span class="logo-soldier">Soldier</span></span>
+                        </h1>
+                        <p id="war-years" class="col-xs-12 col-sm-4 col-md-3">1914 - 1953</p>
+                        <span id="open-nav" class="col-xs-12 col-sm-4 col-md-3" onclick="openNav()">Menu <span class="hamburger-menu">&#9776;</span></span>
+                    </div>
+                </div>
+                <nav id="main-nav" class="full-page-overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span>CLOSE</span></a>
+                    <div class="full-page-overlay-content">
+                        <p class="logo col-xs-12 col-sm-4 col-md-6"><span id="nav-header-logo-wrap" class="logo-wrap"><span class="logo-unknown">Unknown</span> <span class="logo-soldier">Soldier</span></span>
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="#introduction" onclick="closeNav()">Introduction</a>
+                            </li>
+                            <li>
+                                <a href="#directors-statement-inspiration" onclick="closeNav()">Director's Statement/Inspiration</a>
+                            </li>
+                            <li>
+                                <a href="#why-were-making-it" onclick="closeNav()">Why We're Making It</a>
+                            </li>
+                            <li>
+                                <a href="#episode-teasers" onclick="closeNav()">Episode Teasers</a>
+                            </li>
+                            <li>
+                                <a href="#the-future" onclick="closeNav()">The Future</a>
+                            </li>
+                            <li>
+                                <a href="#target-audience" onclick="closeNav()">Target Audience</a>
+                            </li>
+                            <li>
+                                <a href="#budget" onclick="closeNav()">Budget</a>
+                            </li>
+                            <li>
+                                <a href="#contact" onclick="closeNav()">Contact</a>
+                            </li>
+                        </ul>
+                        <p class="copyright">&copy; 2019 MAV Films. All Rights Reserved</p>
+                        <p id="privacy-policy"><a href="#">Privacy Policy</a></p>
+                    </div>
+                </nav>
+            </div>
+            <h2><span class="heading-opener">A Narrative War Anthology</span> <span class="heading-content">A closer look at the stories of lesser known war heroes that faced immeasurable odds and changed the course of history.</span></h2>
+            <p class="video-link"><a href="#modal-sizzle" class="click-here">Click here and watch a sneak peak </a></p>
+
+            <section class="modal--show" id="modal-sizzle" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+                <div class="wrap-modal-inner">
+                    <div class="modal-inner">
+                        <div class="resp-container">
+                            <header class="sr-only">
+                                <h2 id="modal-label-2">Unknown Soldier sizzle video</h2>
+                            </header>
+                            <iframe class="resp-iframe lazyload" src="https://player.vimeo.com/video/230607208" width="560" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            <a href="#!" class="close-video" title="Close this modal" data-close="Close" data-dismiss="modal">X</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#!" class="modal-close" data-close="Close" data-dismiss="modal"></a>
+            </section>
+
+        </header>
+        <section id="introduction">
+            <div id="synopsis" class="row">
+                <img class="img-1 col-sm-6 col-md-5 offset-md-1 parallax lazyload" data-rellax-speed="0" src="assets/img/synopsis-photo-1.jpg" alt="Dog tags hanging" />
+                <div class="wrap-content-1 col-sm-6 col-md-5">
+                    <h2>Synopsis</h2>
+                    <p><strong>Unknown Soldier</strong> is a half-hour anthology series following the untold stories of American war fighters that shows how they contributed to decisive events in our history.</p>
+                </div>
+                <img class="img-2 col-sm-6 col-md-5 offset-md-1 parallax lazyload" data-rellax-speed="2" src="assets/img/synopsis-photo-2.jpg" alt="American flag with sun behind it" />
+                <img class="img-3 col-sm-6 col-md-5 parallax lazyload" data-rellax-speed="-1" src="assets/img/synopsis-photo-3.jpg" alt="A plane propeller" />
+                <div class="wrap-content-2 col-sm-6 col-md-5 offset-md-1">
+                    <p>Each episode features a new mission, new characters, and new conflicts from the battlefield to the homefront.</p>
+                    <a class="click-here" href="#episode-teasers">See Episode Teasers</a>
+                </div>
+                <img class="img-4 col-sm-6 col-md-5 parallax lazyload" data-rellax-speed="2" src="assets/img/synopsis-photo-4.jpg" alt="A soldier walking in the dark with fog" />
+            </div>
+            <div id="distressed-still-1" class="row distressed-still hold-image">
+                <div class="old-image">
+                    <img src="assets/img/synopsis-divider-photo-before.jpg" class="lazyload" alt="Soldiers walking in a field." />
+                </div>
+            </div>
+        </section>
+        <section id="directors-statement-inspiration">
+            <div id="inspiration" class="row">
+                <div class="col">
+                    <h2><span class="heading-opener">You Might Be Asking</span> <span class="heading-content">Where did <strong>Unknown Soldier</strong> come from?</span></h2>
+                    <div id="posters" class="row">
+                        <p class="col-sm-6 col-lg-3">
+                            <a href="//www.imdb.com/title/tt0185906/?ref_=nv_sr_1?ref_=nv_sr_1" target="_blank" rel="nofollow"><img src="assets/img/poster-band-of-brothers.jpg" alt="Band of Brothers poster" /></a>
+                        </p>
+                        <p class="col-sm-6 col-lg-3">
+                            <a href="//www.imdb.com/title/tt2085059/?ref_=nv_sr_1?ref_=nv_sr_1" target="_blank" rel="nofollow"><img src="assets/img/poster-black-mirror.jpg" alt="Black Mirror poster" /></a>
+                        </p>
+                        <!-- 340x480 -->
+                        <p class="col-sm-6 col-lg-3">
+                            <a href="//www.imdb.com/title/tt0374463/?ref_=nv_sr_1?ref_=nv_sr_1" target="_blank" rel="nofollow"><img src="assets/img/poster-the-pacific.jpg" alt="The Pacific poster" /></a>
+                        </p>
+                        <p class="col-sm-6 col-lg-3">
+                            <a href="//www.imdb.com/title/tt0088478/?ref_=nv_sr_8?ref_=nv_sr_8" target="_blank" rel="nofollow"><img src="assets/img/poster-amazing-stories.jpg" alt="Amazing Stories poster" /></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="wrap-directors-statement" class="row">
+                <img class="col-lg-5 season-one lazyload" src="assets/img/dir-statement-season-one-poster.jpg" alt="Unknown Soldier Season One poster" />
+                <div class="col-lg-6 offset-lg-1" id="directors-statement">
+                    <h2>Director's Statement</h2>
+                    <p>Director's Statement goes here. Upon scrolling down to reveal the 4 posters above. They begin to stack on one another to the left. Once they all stack, it turns into the Unknown Soldier poster. Then, this box appears in the empty space
+                        to its right with the director's statement inside. The row of posters above becomes this layout below.</p>
+                    <h3>Learn more about our influences:</h3>
+                    <ul>
+                        <li id="poster-link-band-of-brothers">
+                            <a href="//www.imdb.com/title/tt0185906/?ref_=nv_sr_1?ref_=nv_sr_1" target="_blank" rel="nofollow">Band of Brothers</a>
+                        </li>
+                        <li id="poster-link-black-mirror">
+                            <a href="//www.imdb.com/title/tt2085059/?ref_=nv_sr_1?ref_=nv_sr_1" target="_blank" rel="nofollow">Black Mirror</a>
+                        </li>
+                        <li id="poster-link-pacific">
+                            <a href="//www.imdb.com/title/tt0374463/?ref_=nv_sr_1?ref_=nv_sr_1" target="_blank" rel="nofollow">The Pacific</a>
+                        </li>
+                        <li id="poster-link-amazing-stories">
+                            <a href="//www.imdb.com/title/tt0088478/?ref_=nv_sr_8?ref_=nv_sr_8" target="_blank" rel="nofollow">Amazing Stories</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="why-were-making-it" class="row">
+                <div id="why-were-making-it-inner">
+                    <h2 class="sr-only">Why Make Unknown Soldier?</h2>
+                    <div class="wrap-quote col-md-8 col-lg-5">
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            <p>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <footer>Mark Alex Vogt, MAV Films</footer>
+                        </blockquote>
+                    </div>
+                    <p class="col-sm-12 align-self-end wrap-btn"><a href="#modal-why" class="click-here">See why we made it</a></p>
+                    <section class="modal--show" id="modal-why" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+                        <div class="wrap-modal-inner">
+                            <div class="modal-inner">
+                                <div class="resp-container">
+                                    <header class="sr-only">
+                                        <h2 id="modal-label-2">Why We Made Unknown Soldier</h2>
+                                    </header>
+                                    <iframe class="resp-iframe lazyload" src="https://player.vimeo.com/video/230607208" width="560" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                    <a href="#!" class="close-video" title="Close this modal" data-close="Close" data-dismiss="modal">X</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#!" class="modal-close" data-close="Close" data-dismiss="modal"></a>
+                    </section>
+                </div>
+            </div>
+            <div id="distressed-still-2" class="row distressed-still hold-image">
+                <div class="old-image">
+                    <img src="assets/img/where-divider-photo-before.jpg" class="lazyload" alt="Four military women walking together and talking.." />
+                </div>
+            </div>
+        </section>
+        <section id="episode-teasers">
+            <div id="episodes" class="row">
+                <h2 class="col-md-6">Season One Teasers</h2>
+                <p id="episodes-intro" class="col-md-6">Lorem ipsum dolor sit amet. <br> consectetur adipisicing elit, sed do eiusmod<br> Tempor incididunt ut labore et dolore.</p>
+                <div class="episode ep-1 col-md-6">
+                    <div class="row">
+                        <div class="wrap-title col-sm-8">
+                            <h3>Pathfinder</h3>
+                        </div>
+                        <p class="download-link col-sm-4"> <a href="#" class="download">Download</a> </p>
+                    </div>
+                    <div class="row episode-details">
+                        <p>When a young private lands himself in the brig, he is forced to join an airborne suicide mission for a chance at going home. Together with a small band of misfits, they must work together to lead the way for D-Day behind enemy
+                            lines.
+                        </p>
+                        <div class="flex-video widescreen">
+                            <iframe src="https://player.vimeo.com/video/111481788" class="lazyload" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>
+                        <footer>
+                            <strong>Recorded on</strong> 6/7/19
+                            <span><strong>Clip Length:</strong> 2:20</span>
+                        </footer>
+                    </div>
+                </div>
+                <div class="episode ep-2 col-md-6">
+                    <div class="row">
+                        <div class="wrap-title col-sm-8">
+                            <h3>Buffalo</h3>
+                        </div>
+                        <p class="download-link col-sm-4"> <a href="#" class="download">Download</a> </p>
+                    </div>
+                    <div class="row episode-details">
+                        <p>On Christmas Day 1944, disguised German soldiers ambush an allied mountain village leaving a small group of segregated African-American soldiers surrounded. Alone without the hope of rescue, they must defend the town and make one
+                            of the biggest sacrifices of the Italian campaign.</p>
+                        <div class="flex-video widescreen">
+                            <iframe src="https://player.vimeo.com/video/111481788" class="lazyload" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>
+                        <footer>
+                            <strong>Recorded on</strong> 6/7/19
+                            <span><strong>Clip Length:</strong> 2:20</span>
+                        </footer>
+                    </div>
+                </div>
+                <div class="episode ep-3 col-md-6">
+                    <div class="row">
+                        <div class="wrap-title col-sm-8">
+                            <h3>H<span>u</span>rtgen</h3>
+                        </div>
+                        <p class="download-link col-sm-4"> <a href="#" class="download">Download</a> </p>
+                    </div>
+                    <div class="row episode-details">
+                        <p>A group of cocky, battle worn soldiers are stranded during the bloodiest battle of the European front. Alone with a fresh replacement while facing death at everry turn, they must find their way back from enemy lines amid the horrors
+                            of the Hürtgen Forest.</p>
+                        <div class="flex-video widescreen">
+                            <iframe src="https://player.vimeo.com/video/111481788" class="lazyload" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>
+                        <footer>
+                            <strong>Recorded on</strong> 6/7/19
+                            <span><strong>Clip Length:</strong> 2:20</span>
+                        </footer>
+                    </div>
+                </div>
+                <div class="episode ep-4 col-md-6">
+                    <div class="row">
+                        <div class="wrap-title col-sm-8">
+                            <h3>W.A.S.P.</h3>
+                        </div>
+                        <p class="download-link col-sm-4"> <a href="#" class="download">Download</a> </p>
+                    </div>
+                    <div class="row episode-details">
+                        <p>In 1943 two pilot sisters rush to join the Women Air Service Pilots, but only one has the experience to join. When the older sister tragically dies in a WASP crash, the other must fight harder to join and continue her legacy as
+                            one of the first female air force pilots.</p>
+                        <div class="flex-video widescreen">
+                            <iframe src="https://player.vimeo.com/video/111481788" class="lazyload" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>
+                        <footer>
+                            <strong>Recorded on</strong> 6/7/19
+                            <span><strong>Clip Length:</strong> 2:20</span>
+                        </footer>
+                    </div>
+                </div>
+                <div class="episode ep-5 col-md-6">
+                    <div class="row">
+                        <div class="wrap-title col-sm-8">
+                            <h3>Corregidor</h3>
+                        </div>
+                        <p class="download-link col-sm-4"> <a href="#" class="download">Download</a> </p>
+                    </div>
+                    <div class="row episode-details">
+                        <p>In 1942, American and Phillipino troops fight side by side in their bloody surrender at Corregidor. After escaping imprisonment, one private is reassigned on a mission to take back the island from an unforgiving enemy.</p>
+                        <div class="flex-video widescreen">
+                            <iframe src="https://player.vimeo.com/video/111481788" class="lazyload" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>
+                        <footer>
+                            <strong>Recorded on</strong> 6/7/19
+                            <span><strong>Clip Length:</strong> 2:20</span>
+                        </footer>
+                    </div>
+                </div>
+                <div class="episode ep-6 col-md-6">
+                    <div class="row">
+                        <div class="wrap-title col-sm-8">
+                            <h3>Go For Broke</h3>
+                        </div>
+                        <p class="download-link col-sm-4"> <a href="#" class="download">Download</a> </p>
+                    </div>
+                    <div class="row episode-details">
+                        <p>When the famed Texas Battalion is trapped behind enemy lines, The Army begrudgingly enlists the help of the 442nd — A unit entirely made up of Japanese-American soldiers. Against all odds while being treated as an expendable force,
+                            the unit must embark on the daring rescue of the "Lost Battalion."</p>
+                        <div class="flex-video widescreen">
+                            <iframe src="https://player.vimeo.com/video/111481788" class="lazyload" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>
+                        <footer>
+                            <strong>Recorded on</strong> 6/7/19
+                            <span><strong>Clip Length:</strong> 2:20</span>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div id="future">
+                <div id="future-intro" class="row col-sm-10 offset-sm-1">
+                    <h2>And that is just the beginning.</h2>
+                    <p>We have so much more planned for <strong>Unknown Soldier</strong> that's already in the works. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                </div>
+                <ul id="season-chooser">
+                    <li class="s1">
+                        <a onmouseover="seasonPoster1Hover()" onmouseout="seasonPoster1RemoveHover()" href="#poster-s1"><span>Season One</span></a>
+                    </li>
+                    <li class="s2">
+                        <a onmouseover="seasonPoster2Hover()" onmouseout="seasonPoster2RemoveHover()" href="#poster-s2"><span>Season Two</span></a>
+                    </li>
+                    <li class="s3">
+                        <a onmouseover="seasonPoster3Hover()" onmouseout="seasonPoster3RemoveHover()" href="#poster-s3"><span>Season Three</span></a>
+                    </li>
+                    <li class="s4">
+                        <a onmouseover="seasonPoster4Hover()" onmouseout="seasonPoster4RemoveHover()" href="#poster-s4"><span>Season Four</span></a>
+                    </li>
+                </ul>
+                <small class="info">Subtle horizontal shift as you scroll down.</small>
+                <div id="season-posters">
+                    <div id="season-posters-inner" class="">
+                        <span id="poster-s1"><img src="assets/img/future-season-1-poster-bw.jpg" alt="Season 1 poster" class="lazyload" /></span>
+                        <span id="poster-s2"><img src="assets/img/future-season-2-poster-bw.jpg" alt="Season 2 poster" class="lazyload" /></span>
+                        <span id="poster-s3"><img src="assets/img/future-season-3-poster-bw.jpg" alt="Season 3 poster" class="lazyload" /></span>
+                        <span id="poster-s4"><img src="assets/img/future-season-4-poster-bw.jpg" alt="Season 4 poster" class="lazyload" /></span>
+                    </div>
+                </div>
+            </div>
+            <div id="distressed-still-3" class="row distressed-still hold-image">
+                <div class="old-image">
+                    <img src="assets/img/future-divider-photo-before.jpg" alt="Man putting up radio tower and another man trying to make contact." class="lazyload" />
+                </div>
+            </div>
+        </section>
+        <section id="target-audience">
+            <div class="row">
+                <h2 class="col-sm-6">Our Target Audience</h2>
+                <p class="description col-sm-6">Lorem ipsum dolor sit amet. <br> consectetur adipisicing elit, sed do eiusmod<br> Tempor incididunt ut labore et dolore.</p>
+            </div>
+            <div id="target-statistics" class="row">
+                <div id="time-gender-stats-1" class="col-lg-6 show-on-scroll">
+                    <figure>
+                        <figcaption class="sr-only">SVG PIE Chart with CSS animation</figcaption>
+                        <svg viewbox="0 0 63.6619772368 63.6619772368">
+                                <circle class="pie1" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie2" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie3" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie4" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            </svg>
+                        <div class="pie1-divider pie-divider"></div>
+                        <div class="pie1-text pie-text"></div>
+                        <div class="pie2-divider pie-divider"></div>
+                        <div class="pie2-text pie-text"></div>
+                        <div class="pie3-divider pie-divider"></div>
+                        <div class="pie3-text pie-text"></div>
+                        <div class="pie4-divider pie-divider"></div>
+                        <div class="pie4-text pie-text"></div>
+                        <div class="pie5-divider pie-divider"></div>
+                        <div class="pie5-text pie-text"></div>
+                    </figure>
+                    <ul id="pie-stat-percentages">
+                        <li>
+                            <span>35%</span> Stat 1
+                        </li>
+                        <li>
+                            <span>25%</span> Stat 2
+                        </li>
+                        <li>
+                            <span>20%</span> Stat 3
+                        </li>
+                        <li>
+                            <span>15%</span> Stat 4
+                        </li>
+                        <li>
+                            <span>5%</span> Stat 5
+                        </li>
+                    </ul>
+                </div>
+                <div id="time-gender-stats-2" class="col-lg-6">
+                    <div class="row">
+                        <div id="avg-watch-time" class="col-12 show-on-scroll">
+                            <h3>Average watch time (minutes) for target demo</h3>
+                            <p><span><img src="assets/img/avg-watch-time-bar.svg" alt="Average watch time bar chart"/></span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="gender-graphic" class="col-sm-6 show-on-scroll">
+                            <p><img src="assets/img/stats-men-women.svg" alt="Gender demographic" class="lazyload" /></p>
+                            <ul>
+                                <li>
+                                    <span>65%</span> MALE
+                                </li>
+                                <li>
+                                    <span>35%</span> FEMALE
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="gender-text" class="col-sm-6">
+                            <h3>Gender Identification:</h3>
+                            <h4>Male or Female</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="additional-target-info" class="row">
+                <h3>Additional Target Audience Statement Goes Here</h3>
+                <div class="text-columns">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+            <div id="distressed-still-4" class="row distressed-still hold-image">
+                <div class="old-image">
+                    <img src="assets/img/target-divider-photo-before.jpg" alt="Japanese-American men saluting" class="lazyload" />
+                </div>
+                <div id="end-of-image-4"></div>
+            </div>
+        </section>
+        <section id="budget">
+            <div class="row">
+                <div id="budget-info" class="col-lg-6 show-on-scroll">
+                    <h2>Where Does the Budget Go?</h2>
+                    <p>Donec lacinia purus tincidunt, mattis leo mattis, tempor diam. Nulla facilisi. Nulla vitae semper mauris. Donec posuere sollicitudin dui a aliquam.</p>
+                    <div class="shadow-box box-1">
+                        <p>Vestibulum feugiat mauris sit amet.</p>
+                    </div>
+                    <div class="shadow-box box-2">
+                        <p>Vestibulum feugiat elementum.</p>
+                    </div>
+                    <div class="shadow-box box-3">
+                        <p>Average Cost Per Episode: $1.5 Million</p>
+                    </div>
+                    <ul id="misc-budget-stats">
+                        <li>
+                            <span>$250K</span> Talent
+                        </li>
+                        <li>
+                            <span>$250K</span> Equipment
+                        </li>
+                        <li>
+                            <span>$250K</span> Production
+                        </li>
+                        <li>
+                            <span>$250K</span> Editing
+                        </li>
+                        <li>
+                            <span>$250K</span> Promotion
+                        </li>
+                        <li>
+                            <span>$250K</span> Airing
+                        </li>
+                    </ul>
+                </div>
+                <div id="budget-bars" class="col-lg-6 show-on-scroll">
+                    <h3>Bar Graph With a Focus On Budget Stats</h3>
+                    <div id="budget-bar-graph">
+                        <ul class="activity_chart">
+                            <li>
+                                <div class="budget_chart_bar">
+                                    <span></span>
+                                </div>
+                                <span class="budget-number">65%</span>
+                            </li>
+                            <li>
+                                <div class="budget_chart_bar">
+                                    <span></span>
+                                </div>
+                                <span class="budget-number">45%</span>
+                            </li>
+                            <li>
+                                <div class="budget_chart_bar">
+                                    <span></span>
+                                </div>
+                                <span class="budget-number">75%</span>
+                            </li>
+                            <li>
+                                <div class="budget_chart_bar">
+                                    <span></span>
+                                </div>
+                                <span class="budget-number">50%</span>
+                            </li>
+                            <li>
+                                <div class="budget_chart_bar">
+                                    <span></span>
+                                </div>
+                                <span class="budget-number">40%</span>
+                            </li>
+                            <li>
+                                <div class="budget_chart_bar">
+                                    <span></span>
+                                </div>
+                                <span class="budget-number">44%</span>
+                            </li>
+                            <li>
+                                <div class="budget_chart_bar">
+                                    <span></span>
+                                </div>
+                                <span class="budget-number">65%</span>
+                            </li>
+                            <li>
+                                <div class="budget_chart_bar">
+                                    <span></span>
+                                </div>
+                                <span class="budget-number">45%</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul id="bar-graph-budget-stats">
+                        <li>
+                            <span>Color one</span>
+                        </li>
+                        <li>
+                            <span>Color two</span>
+                        </li>
+                        <li>
+                            <span>Color three</span>
+                        </li>
+                        <li>
+                            <span>Color four</span>
+                        </li>
+                        <li>
+                            <span>Color five</span>
+                        </li>
+                        <li>
+                            <span>Color six</span>
+                        </li>
+                        <li>
+                            <span>Color seven</span>
+                        </li>
+                        <li>
+                            <span>Color eight</span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="budget-intention" class="row">
+                    <div class="col">
+                        <h2>Budget Intentions Statement</h2>
+                        <div class="text-columns">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="contact">
+            <div class="row">
+                <div id="join-the-fight" class="col-lg-6">
+                    <h2>Join the Fight</h2>
+                    <p>Maecenas et orci sagittis enim faucibus vestibulum sit amet vel est. Fusce diam eros, placerat non nisl sit amet, ornare efficitur tortor. Morbi volutpat dui imperdiet nulla aliquam.</p>
+                    <div class="wrap-photos">
+                        <img src="assets/img/join-photo-1.jpg" class="parallax lazyload" data-rellax-speed="0" alt="Military uniform on bench" />
+                        <img src="assets/img/join-photo-2.jpg" class="parallax lazyload" data-rellax-speed="0" alt="Photo of young men in military outfits" />
+                        <img src="assets/img/join-photo-3.jpg" class="parallax lazyload" data-rellax-speed="0" alt="Photo of the general" />
+                        <img src="assets/img/join-photo-4.jpg" class="parallax lazyload" data-rellax-speed="0" alt="Four planes flying in formation" />
+                    </div>
+                </div>
+                <div id="join-the-fight-form" class="col-lg-6">
+                    <form action="action" method="post" id="contact-form">
+                        <h3><span class="title-background"></span>Unknown Soldier <span class="title-break">wants you! Contact us:</span></h3>
+                        <div class="row requiredRow">
+                            <label for="txt_FullName" id="FullName-ariaLabel" class="sr-only">Full Name</label>
+                            <input id="txt_FullName" name="txt_FullName" type="text" aria-labelledby="FullName-ariaLabel" class="required" placeholder="ENTER FULL NAME" title="Full Name. This is a required field" />
+                        </div>
+                        <div class="row requiredRow">
+                            <label for="Email" id="Email-ariaLabel" class="sr-only">Email</label>
+                            <input id="Email" name="Email" type="email" aria-labelledby="Email-ariaLabel" class="required" placeholder="ENTER EMAIL ADDRESS" title="Full Name. This is a required field" />
+                        </div>
+                        <div class="row custom-select requiredRow">
+                            <label for="sel_ReasonforContacting" id="ReasonforContacting-ariaLabel" class="sr-only">Reason for Contacting</label>
+                            <select id="sel_ReasonforContacting" name="sel_ReasonforContacting" aria-labelledby="ReasonforContacting-ariaLabel" class="required" title="Reason for Contacting. This is a required field">
+                                    <option value="Reason 1">Reason for Contacting</option>
+                                    <option value="Reason 1">Reason 1</option>
+                                    <option value="Reason 2">Reason 2</option>
+                                    <option value="Reason 3">Reason 3</option>
+                                    <option value="Reason 4">Reason 4</option>
+                                </select>
+                        </div>
+                        <div class="row requiredRow">
+                            <label for="txtarea_Message" id="Message-ariaLabel" class="sr-only">Message</label>
+                            <textarea id="txtarea_Message" name="txtarea_Message" cols="20" rows="3" aria-labelledby="Message-ariaLabel" placeholder="ENTER MESSAGE" class="required" title="Message. This is a required field"></textarea>
+                        </div>
+                        <div class="row wrap-submit">
+                            <input type="submit" value="Send Communiqué" />
+                        </div>
+                    </form>
+                    <a id="back-to-top" class="alt-button" href="#top">Back to Top</a>
+                </div>
+            </div>
+            <div id="privacy" class="row">
+                <div id="footer-logo" class="col-sm-4">
+                    <p class="logo col-xs-12 col-sm-4 col-md-6"><span id="footer-logo-wrap" class="logo-wrap"><span class="logo-unknown">Unknown</span> <span class="logo-soldier">Soldier</span></span>
+                    </p>
+                </div>
+                <div id="copyright" class="col-sm-4">
+                    <p><span>&copy; 2019 MAV Films. All rights reserved.</span> <br><a href="#">Privacy Policy</a></p>
+                </div>
+                <div id="made-by" class="col-sm-4">
+                    <p>Site crafted by <a href="//www.mediaura.com/" target="_blank">Mediaura</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/dist/footer_js/footerjs.mins.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("main-nav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("main-nav").style.width = "0%";
+        }
+
+        var headerStick = document.querySelector("#header-stick");
+        // construct an instance of Headroom, passing the element
+        var headroom = new Headroom(headerStick, {
+            "offset": 0,
+            "tolerance": 30,
+            "classes": {
+                "initial": "animated",
+                "pinned": "slideDown",
+                "unpinned": "slideUp"
+            }
+        });
+        headroom.init();
+    </script>
+</body>
+
+</html>

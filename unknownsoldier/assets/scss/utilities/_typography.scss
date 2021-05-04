@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'new_amsterdamregular';
+    src: url('assets/fonts/newamsterdam-webfont.woff2') format('woff2'),
+         url('assets/fonts/newamsterdam-webfont.woff') format('woff'),
+         url('assets/fonts/newamsterdam-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'splendid_66bold';
+    src: url('assets/fonts/splendidb-webfont.woff2') format('woff2'),
+         url('assets/fonts/splendidb-webfont.woff') format('woff'),
+         url('assets/fonts/splendidb-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'splendid_66light';
+    src: url('assets/fonts/splendidi-webfont.woff2') format('woff2'),
+         url('assets/fonts/splendidi-webfont.woff') format('woff'),
+         url('assets/fonts/splendidi-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'splendid_66regular';
+    src: url('assets/fonts/splendidn-webfont.woff2') format('woff2'),
+         url('assets/fonts/splendidn-webfont.woff') format('woff'),
+         url('assets/fonts/splendidn-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Typography
+
+$h1_font_size: 2em !default;
+$h2_font_size: 1.5em !default;
+$h3_font_size: 1.17em !default;
+$h4_font_size: 1em !default;
+$h5_font_size: 0.83em !default;
+$h6_font_size: 0.75em !default;
+
+$h1_margin: 0.67em 0 !default;
+$h2_margin: 0.83em 0 !default;
+$h3_margin: 1em 0 !default;
+$h4_margin: 1.33em 0 !default;
+$h5_margin: 1.67em 0 !default;
+$h6_margin: 2.33em 0 !default;
+
+// $base-font-size
+//
+// Base font size in used in _mixins.scss
+//
+// $base-font-size - {number}
+
+$base-font-size:              16;
+
+// $base-line-height
+//
+// Base line-height in used in _mixins.scss
+//
+// $base-line-height - {number}
+
+$base-line-height:            24;
+
+// Font Stacks
+
+// $typefaces
+//
+// Configuration of webfonts imports.
+//
+// $typefaces - {map}
+// @family - {string}
+// @weight - {integer} or {keyword} i.e. 800, bold
+// @style - {keyword} i.e. normal, italic
+
+//$typefaces: (
+//  'FILENAME': (
+//    family: 'fontname',
+//    weight: 100,
+//    style: normal,
+//  ),
+//);
+
+// $font-family-sans-fallback
+//
+// Define font stack used for sans-serifs.
+//
+// $font-family-sans-fallback - {list}
+
+$font-family-sans-fallback:   'Arial', sans-serif;
+
+// $font-family-sans
+//
+// Define font stack used for sans-serifs.
+//
+// $font-family-sans - {list}
+// @requires - `$font-family-sans-fallback`
+
+$font-family-sans:            'new_amsterdamregular', impact, 'Helvetica Neue', 'Helvetica', $font-family-sans-fallback;
+
+//  Typical weight names and numbers
+//  "light":                   300,
+//  "regular":                  400,
+//  "semi-bold":                600,
+//  "bold":                     700,
+//  "black":                    900,
+
+$sans-weight: (
+  "regular":                  400,
+);
+
+// $font-family-serif
+//
+// Define font stack used for serifs.
+//
+// $font-family-serif - {list}
+
+$font-family-serif:           'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
+
+$serif-weight: (
+  "light":                     300,
+  "regular":                   400,
+  "semi-bold":                 600,
+);
+// $font-family-monospace
+//
+// Define font stack used for monospaced copy.
+//
+// $font-family-monospace - {list}
+
+$font-family-monospace:       'Courier', 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', monospace;
+$font-family-monospace-alt:        	  'splendid_66regular', 'Courier', 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', monospace;
+$font-family-monospace-alt-light:     'splendid_66light', 'Courier', 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', monospace;
+$font-family-monospace-alt-bold:       'splendid_66bold', 'Courier', 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', monospace;
+
+// $font-family-display
+//
+// Define font stack used for headings.
+//
+// $font-family-display - {list}
+
+$font-family-display:         			  $font-family-monospace-alt;
+$font-family-display-light:           $font-family-monospace-alt-light;
+$font-family-display-bold:            $font-family-monospace-alt-bold;
+$font-family-heading:         			  $font-family-sans;
+$font-family-alt-heading:    			    $font-family-monospace-alt-bold;
+$font-family-alt-heading-light:     	$font-family-monospace-alt-light;
+$font-family-alt-heading-regular:     $font-family-monospace;
+
+// $font-family-default
+//
+// Define font stack used for paragraphs.
+//
+// $font-family-default - {string}
+// @requires - `$font-family-sans`
+
+$font-family-default:         $font-family-monospace;

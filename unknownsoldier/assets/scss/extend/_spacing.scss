@@ -1,0 +1,42 @@
+//
+// Extending
+// --------------------------------------------------
+
+%push-to-edge {
+	padding-left: 0;
+	padding-right: 0;
+}
+%full-width-background {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 -15px;
+}
+%pad-section-top-bottom {
+    $map: (576px: 22px, 768px: 24px, 992px: 34px, 1200px: 132px);
+    @include poly-fluid-sizing('padding-top', $map);
+    @include poly-fluid-sizing('padding-bottom', $map);
+}
+%default-top-padding {
+    $map: (576px: 22px, 768px: 24px, 992px: 34px, 1200px: 132px);
+    @include poly-fluid-sizing('padding-top', $map);
+}
+%default-bottom-padding {
+    $map: (576px: 22px, 768px: 24px, 992px: 34px, 1200px: 132px);
+    @include poly-fluid-sizing('padding-bottom', $map);
+}
+%default-top-margin {
+    $map: (576px: 22px, 768px: 24px, 992px: 34px, 1200px: 132px);
+    @include poly-fluid-sizing('margin-top', $map);
+}
+%default-bottom-margin {
+    $map: (576px: 22px, 768px: 24px, 992px: 34px, 1200px: 132px);
+    @include poly-fluid-sizing('margin-bottom', $map);
+}
+%center-space-left {
+	$map: (991px: $gutter-spacing, 992px: 34px, 1200px: 36px);
+	@include poly-fluid-sizing('padding-left', $map);
+}
+%center-space-right {
+	$map: (991px: $gutter-spacing, 992px: 34px, 1200px: 36px);
+	@include poly-fluid-sizing('padding-right', $map);
+}

@@ -1,0 +1,239 @@
+/* Example code
+<article>
+	<h1>Boilerplate for Grids</h1>
+	<section class="container">
+		<h2>1. Floated items</h2>
+		<div class="grid grid-floated">
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+		</div><!-- .grid -->
+		<h2>2. Inline-block items</h2>
+		<div class="grid grid-ib">
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+		</div><!-- .grid -->
+		<h2>3. Flexbox — single row</h2>
+		<div class="grid grid-flex">
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+		</div><!-- .grid -->
+		<h2>4. Flexbox with float fallback</h2>
+		<div class="grid grid-floated grid-flex">
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+		</div><!-- .grid -->
+		<h2>5. Flexbox with inline-block fallback</h2>
+		<div class="grid grid-ib grid-flex">
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+			<div class="grid-size-1of5">
+				<div class="grid-content">1/5</div>
+			</div>
+		</div><!-- .grid -->
+		<h2>6. Two column layout (flex + floats)</h2>
+		<div class="grid grid-floated grid-flex">
+			<div class="grid-golden-1">
+				<div class="grid-content">62%</div>
+			</div>
+			<div class="grid-golden-2">
+				<div class="grid-content">38%</div>
+			</div>
+		</div><!-- .grid -->
+		<h2>7. Two column layout (flex + inline-blocks)</h2>
+		<div class="grid grid-ib grid-flex">
+			<div class="grid-golden-1">
+				<div class="grid-content">62%</div>
+			</div>
+			<div class="grid-golden-2">
+				<div class="grid-content">38%</div>
+			</div>
+		</div><!-- .grid -->
+	</section>
+</article>
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Establish block-formatting context to contain floats and margins */
+.container {
+	display: inline-block;
+	width: 100%;
+}
+
+/* gutter of 20px; margin-left puts 10px before and after */
+.grid {
+	width: 100%;
+	margin-left: -10px;
+}
+
+/* padding-left creates gutter */
+.grid > * {
+	padding-left: 20px;
+}
+
+/* Clear floats */
+.grid-content {
+	padding: .75em;
+	background-color: #c4c4c4;
+	background-color: rgba(153, 153, 153, .5);
+
+}
+
+/* styles for floated layout */
+.grid-floated:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.grid-floated > * {
+	float: left;
+}
+
+/*	Styles for inline-block layout */
+/*	Note: Most, but not all browsers eliminate the single space between each inline-block. Using white-space:nowrap; prevents the grids wrapping, at the expense of a slightly wider grid. */
+.grid-ib {
+	font-size: 0;
+	white-space: nowrap;
+}
+
+/* Be sure to reset these "fixes" */
+.grid-ib > * {
+	display: inline-block;
+	font-size: 16px;
+	font-size: 1rem;
+	white-space: normal;
+}
+
+/* Styles for flex layout */
+/* 	Note: display:-webkit-box is an old version of flexbox used by Safari 5 (Windows) and Android. It does not play well with floats and inline-blocks, so is omitted. */
+.grid-flex {
+	display: -ms-flexbox;	/* IE 10 */
+	display: -webkit-flex;	/* Opera 15-16 */
+	display: flex;			/* IE 11; FF 22+; Opera 12.1, 17+; Chrome 29+ */
+}
+
+/* Grid element sizes */
+.grid-size-1of12 { width: 8.3333%; }
+.grid-size-1of11 { width: 9.0909%; }
+.grid-size-1of10 { width: 10%; }
+.grid-size-1of9 { width: 11.1111%; }
+.grid-size-1of8 { width: 12.5%; }
+.grid-size-1of7 { width: 14.2857%; }
+.grid-size-1of6 { width: 16.6666%; }
+.grid-size-1of5 { width: 20%; }
+.grid-size-1of4 { width: 25%; }
+.grid-size-1of3 { width: 33.3333%; }
+.grid-size-1of2 { width: 50%; }
+.grid-size-1of1 { width: 100%; }
+.grid-golden-1 { width: 62%; }
+.grid-golden-2 { width: 38%; }
+
+/* Fall back to single column for narrow widths */
+@media (max-width:40em) {
+	.grid {
+		display: block;
+	}
+
+	.grid > * {
+		width: 100%;
+		margin-bottom: 1.5em;
+	}
+}
+
+/* IE 7 support if you need it */
+.grid-ib > * {
+	*display: inline;
+}
+
+.grid-content {
+	*background-color: #c4c4c4;
+}
+
+.grid-size-1of5 {
+	width: expression((this.parentNode.clientWidth/5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.grid-size-1of3 {
+	width: expression((this.parentNode.clientWidth/3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.grid-golden-1 {
+	width: expression((this.parentNode.clientWidth*0.62 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.grid-golden-2 {
+	width: expression((this.parentNode.clientWidth*0.38 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.no-flexbox .grid-last {
+	float: none;
+	overflow: hidden;
+	width: auto;
+}

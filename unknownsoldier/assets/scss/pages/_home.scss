@@ -1,0 +1,68 @@
+//defaults
+html {
+	scroll-behavior: smooth;
+	background: $slate;
+}
+body {
+	text-align: center;
+	background-color: #1D1D1D;
+}
+strong {
+	font-weight: 900;
+}
+.info {
+	color: $red;
+	position: absolute;
+	left: 0;
+	display: none;
+}
+.block {
+	margin-left: $default_spacing;
+	margin-right: $default_spacing;
+	padding: $default_spacing;
+	width: 100%;
+}
+a.click-here {
+	@extend %button;
+	@include custom-min-max-width(576, 720) {
+		font-size: 1.2em;
+	}
+}
+.text-columns {
+	@include large {
+		@include column-count(3);
+		@include column-gap(4em);
+	}
+	text-align: left;
+}
+.distressed-still {
+	padding: 0!important;
+	img {
+		width: 100%;
+	}
+}
+#page-wrap {
+	max-width: 1440px;
+	background: $absolute-white;
+	position: relative;
+	.row {
+		@include large-tablet-portrait-and-larger {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+		.row {
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+@import 'sections/1-header';
+@import 'sections/2-introduction';
+@import 'sections/3-directors-statement-inspiration';
+@import 'sections/4-episode-teasers';
+@import 'sections/5-target-audience';
+@import 'sections/6-budget';
+@import 'sections/7-contact';
